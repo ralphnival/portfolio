@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <base href="/portfolio/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="assets/hamburgers.min.css">
+<link rel="stylesheet" href="styles.95b8e7b4cfa9cb919967.css"></head>
+<body>
+  <div>
+      <app-root></app-root>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="assets/jquery.fittext.js"></script>
+  <script src="assets/jquery.lettering.js"></script>
+  <script src="assets/jquery.textillate.js"></script>
+  <script>
+    $(function () {
+      $('.tlt').textillate({ in: { effect: 'bounceInUp' } });
+      $('.hamburger').click(function(){
+        $(this).toggleClass('is-active');
+      });
+      $('nav li').click(function(){
+        $('.hamburger').removeClass('is-active');
+      });
+      $('li#about').click(function(){
+        $(this).addClass('active');
+        $(this).next().removeClass('active');
+      });
+       $('li#works').click(function(){
+        $(this).addClass('active');
+        $(this).prev().removeClass('active');
+      });
+
+       setInterval(function(){
+        if($('#wlightbox').hasClass('active')) {
+          $('html, body').css('overflow', 'hidden');
+       } else {
+        $('html, body').css('overflow', 'initial');
+       }
+       }, 1000);
+    })
+  </script>
+  <script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script><script type="text/javascript" src="es2015-polyfills.c5dd28b362270c767b34.js" nomodule></script><script type="text/javascript" src="polyfills.8bbb231b43165d65d357.js"></script><script type="text/javascript" src="main.998528774ef4e2d13a32.js"></script></body>
+</html>
